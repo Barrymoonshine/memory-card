@@ -1,5 +1,6 @@
 import './Cards.css';
 import React, { useState } from 'react';
+import generateRandomNo from '../../utils/generateRandomNo.js';
 
 const Cards = () => {
   const [fish, setFishState] = useState([
@@ -55,6 +56,7 @@ const Cards = () => {
 
   const logFish = (fishType) => {
     console.log(fishType);
+    console.log(generateRandomNo(1, 12));
   };
 
   return (
