@@ -1,62 +1,71 @@
 import './Cards.css';
 import React, { useState } from 'react';
-import generateRandomNo from '../../utils/generateRandomNo.js';
+import generateRandomNoArray from '../../utils/generateRandomNoArray.js';
 
 const Cards = () => {
   const [fish, setFishState] = useState([
     {
-      order: 1,
+      orderNo: 1,
       fishType: 'Shark',
     },
     {
-      order: 2,
+      orderNo: 2,
       fishType: 'Squid',
     },
     {
-      order: 3,
+      orderNo: 3,
       fishType: 'Octopus',
     },
     {
-      order: 4,
+      orderNo: 4,
       fishType: 'Cod',
     },
     {
-      order: 5,
+      orderNo: 5,
       fishType: 'Salmon',
     },
     {
-      order: 6,
+      orderNo: 6,
       fishType: 'Eel',
     },
     {
-      order: 7,
+      orderNo: 7,
       fishType: 'Anchovy',
     },
     {
-      order: 8,
+      orderNo: 8,
       fishType: 'Crab',
     },
     {
-      order: 9,
+      orderNo: 9,
       fishType: 'Lobster',
     },
     {
-      order: 10,
+      orderNo: 10,
       fishType: 'Prawn',
     },
     {
-      order: 11,
+      orderNo: 11,
       fishType: 'Sword Fish',
     },
     {
-      order: 12,
+      orderNo: 12,
       fishType: 'Tuna',
     },
   ]);
 
   const logFish = (fishType) => {
     console.log(fishType);
-    console.log(generateRandomNo(1, 12));
+    const randomNoArray = generateRandomNoArray(1, 12);
+    const updatedOrderNoArray = fish.map((item, index) => {
+      return { ...item, orderNo: randomNoArray[index] };
+    });
+
+    const sortedArray = updatedOrderNoArray.sort(
+      (a, b) => a.orderNo - b.orderNo
+    );
+    console.log(sortedArray);
+    setFishState(sortedArray);
   };
 
   return (
