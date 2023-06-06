@@ -54,25 +54,34 @@ const Cards = () => {
     },
   ]);
 
-  const logFish = (fishType) => {
-    console.log(fishType);
+  const [clickedFish, setClickedFishState] = useState([]);
+
+  const reOrderFish = () => {
     const randomNoArray = generateRandomNoArray(1, 12);
-    const updatedOrderNoArray = fish.map((item, index) => {
+    const updatedFishOrderNo = fish.map((item, index) => {
       return { ...item, orderNo: randomNoArray[index] };
     });
-
-    const sortedArray = updatedOrderNoArray.sort(
+    const sortedFish = [...updatedFishOrderNo].sort(
       (a, b) => a.orderNo - b.orderNo
     );
-    console.log(sortedArray);
-    setFishState(sortedArray);
+    setFishState(sortedFish);
+  };
+
+  const logFish = (fishType) => {
+    setClickedFishState((prevState) => [...prevState, fishType]);
+    console.log(clickedFish);
+  };
+
+  const handleClick = (fishType) => {
+    reOrderFish();
+    logFish(fishType);
   };
 
   return (
     <div>
       {fish.map((item) => {
         return (
-          <div key={item.fishType} onClick={() => logFish(item.fishType)}>
+          <div key={item.fishType} onClick={() => handleClick(item.fishType)}>
             {item.fishType}
           </div>
         );
