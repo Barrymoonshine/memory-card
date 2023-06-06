@@ -2,10 +2,14 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <div>
-      <div>Don't Forget The Fish!</div>
-      <div>Score: </div>
-      <div>Best score: </div>
+    <div className='header'>
+      <div className='left-container'>
+        <div>Don't Forget The Fish!</div>
+      </div>
+      <div className='right-container'>
+        <div>Score: </div>
+        <div>Best score: </div>
+      </div>
     </div>
   );
 };

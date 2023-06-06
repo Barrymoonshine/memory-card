@@ -78,10 +78,14 @@ const Cards = () => {
   };
 
   return (
-    <div>
+    <div className='cards-container'>
       {fish.map((item) => {
         return (
-          <div key={item.fishType} onClick={() => handleClick(item.fishType)}>
+          <div
+            className='card'
+            key={item.fishType}
+            onClick={() => handleClick(item.fishType)}
+          >
             {item.fishType}
           </div>
         );

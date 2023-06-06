@@ -4,12 +4,17 @@ import Cards from './components/Cards/Cards';
 
 const App = () => {
   return (
-    <div>
-      <div>
+    <div className='page-container'>
+      <main>
         <Header />
-      </div>
-      <div>
         <Cards />
+      </main>
+      <div className='footer'>
+        <p>
+          © Made by
+          <a href='https://github.com/Barrymoonshine'>Barry Moonshine</a> for
+          <a href='https://www.theodinproject.com/'>The Odin Project</a>
+        </p>
       </div>
     </div>
   );
