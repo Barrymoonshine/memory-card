@@ -1,13 +1,11 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Cards from './components/Cards/Cards';
+import Main from './components/Main';
 
 const App = () => {
   return (
     <div className='page-container'>
       <main>
-        <Header />
-        <Cards />
+        <Main />
       </main>
       <div className='footer'>
         <p>

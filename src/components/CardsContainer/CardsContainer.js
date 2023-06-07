@@ -1,6 +1,7 @@
 import './CardsContainer.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import generateRandomNoArray from '../../utils/generateRandomNoArray.js';
+import Card from '../Card/Card';
 
 const CardsContainer = () => {
   const [fish, setFishState] = useState([
@@ -54,9 +55,7 @@ const CardsContainer = () => {
     },
   ]);
 
-  const [clickedFish, setClickedFishState] = useState([]);
-
-  const reOrderCards = () => {
+  const reOrderCards = useCallback(() => {
     const randomNoArray = generateRandomNoArray(1, 12);
     const updatedFishOrderNo = fish.map((item, index) => {
       return { ...item, orderNo: randomNoArray[index] };
@@ -65,36 +64,17 @@ const CardsContainer = () => {
       (a, b) => a.orderNo - b.orderNo
     );
     setFishState(sortedFish);
-  };
-
-  const handleClickedCard = () => {
-    clickedFish.some((item, index) => clickedFish.indexOf(item) !== index)
-      ? alert('Duplicate fish, start again')
-      : alert('Not duplicate fish');
-  };
-
-  useEffect(() => {
-    handleClickedCard();
-    reOrderCards();
-  });
-
-  const handleClick = (fishType) => {
-    setClickedFishState((prevState) => [...prevState, fishType]);
-  };
+  }, [fish]);
 
   return (
     <div className='cards-container'>
-      {fish.map((item) => {
-        return (
-          <div
-            className='card'
-            key={item.fishType}
-            onClick={() => handleClick(item.fishType)}
-          >
-            {item.fishType}
-          </div>
-        );
-      })}
+      {fish.map((item) => (
+        <Card
+          key={item.fishType}
+          fishType={item.fishType}
+          reOrderCards={reOrderCards}
+        />
+      ))}
     </div>
   );
 };
