@@ -1,5 +1,5 @@
 import './Cards.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import generateRandomNoArray from '../../utils/generateRandomNoArray.js';
 
 const Cards = () => {
@@ -67,14 +67,17 @@ const Cards = () => {
     setFishState(sortedFish);
   };
 
-  const logFish = (fishType) => {
-    setClickedFishState((prevState) => [...prevState, fishType]);
+  const logFish = () => {
     console.log(clickedFish);
   };
 
+  useEffect(() => {
+    logFish();
+  });
+
   const handleClick = (fishType) => {
     reOrderFish();
-    logFish(fishType);
+    setClickedFishState((prevState) => [...prevState, fishType]);
   };
 
   return (
