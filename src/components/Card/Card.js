@@ -12,11 +12,11 @@ const CardsContainer = (props) => {
 
   useEffect(() => {
     handleClickedCard();
-    props.reOrderCards();
-  }, [handleClickedCard, props]);
+  }, [handleClickedCard]);
 
   const handleClick = (fishType) => {
     setClickedFishState((prevState) => [...prevState, fishType]);
+    props.reOrderCards();
   };
 
   return (

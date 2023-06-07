@@ -1,5 +1,5 @@
 import './CardsContainer.css';
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import generateRandomNoArray from '../../utils/generateRandomNoArray.js';
 import Card from '../Card/Card';
 
@@ -55,7 +55,7 @@ const CardsContainer = () => {
     },
   ]);
 
-  const reOrderCards = useCallback(() => {
+  const reOrderCards = () => {
     const randomNoArray = generateRandomNoArray(1, 12);
     const updatedFishOrderNo = fish.map((item, index) => {
       return { ...item, orderNo: randomNoArray[index] };
@@ -64,7 +64,7 @@ const CardsContainer = () => {
       (a, b) => a.orderNo - b.orderNo
     );
     setFishState(sortedFish);
-  }, [fish]);
+  };
 
   return (
     <div className='cards-container'>
