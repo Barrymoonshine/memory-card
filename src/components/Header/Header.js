@@ -8,7 +8,7 @@ const Header = (props) => {
       </div>
       <div className='right-container'>
         <div>Current score: {props.currentScore}</div>
-        <div>Best score: </div>
+        <div>Best score: {props.bestScore}</div>
       </div>
     </div>
   );

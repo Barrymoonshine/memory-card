@@ -6,8 +6,8 @@ const CardsContainer = (props) => {
 
   const handleCard = (updatedState) => {
     updatedState.some((item, index) => updatedState.indexOf(item) !== index)
-      ? console.log('Duplicate fish, start again')
-      : props.incrementScore();
+      ? props.resetCurrentScore()
+      : props.updateScores();
   };
 
   const handleClick = (fishType) => {
