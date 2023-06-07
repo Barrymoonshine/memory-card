@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import generateRandomNoArray from '../../utils/generateRandomNoArray.js';
 import Card from '../Card/Card';
 
-const CardsContainer = () => {
+const CardsContainer = (props) => {
   const [fish, setFishState] = useState([
     {
       orderNo: 1,
@@ -66,6 +66,11 @@ const CardsContainer = () => {
     setFishState(sortedFish);
   };
 
+  const incrementScore = () => {
+    props.incrementCurrentScore();
+    console.log(`incrementScore called`);
+  };
+
   return (
     <div className='cards-container'>
       {fish.map((item) => (
@@ -73,6 +78,7 @@ const CardsContainer = () => {
           key={item.fishType}
           fishType={item.fishType}
           reOrderCards={reOrderCards}
+          incrementScore={incrementScore}
         />
       ))}
     </div>
