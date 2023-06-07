@@ -66,12 +66,11 @@ const CardsContainer = (props) => {
     setFishState(sortedFish);
   };
 
-  const updateScores = () => {
+  const handleParentScores = () => {
     props.handleScores();
-    console.log(`updateScores called`);
   };
 
-  const resetCurrentScore = () => {
+  const resetParentCurrentScore = () => {
     props.resetCurrentScore();
   };
 
@@ -82,8 +81,8 @@ const CardsContainer = (props) => {
           key={item.fishType}
           fishType={item.fishType}
           reOrderCards={reOrderCards}
-          updateScores={updateScores}
-          resetCurrentScore={resetCurrentScore}
+          handleParentScores={handleParentScores}
+          resetParentCurrentScore={resetParentCurrentScore}
         />
       ))}
     </div>

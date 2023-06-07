@@ -4,15 +4,28 @@ import React, { useState } from 'react';
 const CardsContainer = (props) => {
   const [clickedFish, setClickedFishState] = useState([]);
 
-  const handleCard = (updatedState) => {
-    updatedState.some((item, index) => updatedState.indexOf(item) !== index)
-      ? props.resetCurrentScore()
-      : props.updateScores();
+  const resetClickedFish = () => {
+    setClickedFishState([]);
+  };
+
+  const checkForDuplicate = (updatedArray) => {
+    return updatedArray.some(
+      (item, index) => updatedArray.indexOf(item) !== index
+    );
+  };
+
+  const handleCard = (updatedArray) => {
+    const isCardDuplicate = checkForDuplicate(updatedArray);
+    if (isCardDuplicate) {
+      props.resetParentCurrentScore();
+      resetClickedFish();
+    } else {
+      props.handleParentScores();
+    }
   };
 
   const handleClick = (fishType) => {
     const updatedArray = [...clickedFish, fishType];
-    console.log(updatedArray);
     setClickedFishState(updatedArray);
     handleCard(updatedArray);
     props.reOrderCards();
