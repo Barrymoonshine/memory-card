@@ -1,21 +1,20 @@
 import './Card.css';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 
 const CardsContainer = (props) => {
   const [clickedFish, setClickedFishState] = useState([]);
 
-  const handleClickedCard = useCallback(() => {
-    clickedFish.some((item, index) => clickedFish.indexOf(item) !== index)
+  const handleClickedCard = (updatedState) => {
+    updatedState.some((item, index) => updatedState.indexOf(item) !== index)
       ? console.log('Duplicate fish, start again')
       : console.log('Not duplicate fish');
-  }, [clickedFish]);
-
-  useEffect(() => {
-    handleClickedCard();
-  }, [handleClickedCard]);
+  };
 
   const handleClick = (fishType) => {
-    setClickedFishState((prevState) => [...prevState, fishType]);
+    const updatedArray = [...clickedFish, fishType];
+    console.log(updatedArray);
+    handleClickedCard(updatedArray);
+    setClickedFishState(updatedArray);
     props.reOrderCards();
   };
 
