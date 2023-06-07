@@ -67,16 +67,18 @@ const Cards = () => {
     setFishState(sortedFish);
   };
 
-  const logFish = () => {
-    console.log(clickedFish);
+  const handleClickedFish = () => {
+    clickedFish.some((item, index) => clickedFish.indexOf(item) !== index)
+      ? alert('Duplicate fish, start again')
+      : alert('Not duplicate fish');
   };
 
   useEffect(() => {
-    logFish();
+    handleClickedFish();
+    reOrderFish();
   });
 
   const handleClick = (fishType) => {
-    reOrderFish();
     setClickedFishState((prevState) => [...prevState, fishType]);
   };
 
