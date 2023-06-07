@@ -1,8 +1,8 @@
-import './Cards.css';
+import './CardsContainer.css';
 import React, { useState, useEffect } from 'react';
 import generateRandomNoArray from '../../utils/generateRandomNoArray.js';
 
-const Cards = () => {
+const CardsContainer = () => {
   const [fish, setFishState] = useState([
     {
       orderNo: 1,
@@ -56,7 +56,7 @@ const Cards = () => {
 
   const [clickedFish, setClickedFishState] = useState([]);
 
-  const reOrderFish = () => {
+  const reOrderCards = () => {
     const randomNoArray = generateRandomNoArray(1, 12);
     const updatedFishOrderNo = fish.map((item, index) => {
       return { ...item, orderNo: randomNoArray[index] };
@@ -67,15 +67,15 @@ const Cards = () => {
     setFishState(sortedFish);
   };
 
-  const handleClickedFish = () => {
+  const handleClickedCard = () => {
     clickedFish.some((item, index) => clickedFish.indexOf(item) !== index)
       ? alert('Duplicate fish, start again')
       : alert('Not duplicate fish');
   };
 
   useEffect(() => {
-    handleClickedFish();
-    reOrderFish();
+    handleClickedCard();
+    reOrderCards();
   });
 
   const handleClick = (fishType) => {
@@ -99,4 +99,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default CardsContainer;
