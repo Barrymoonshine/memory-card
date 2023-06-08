@@ -4,9 +4,8 @@ const Header = (props) => {
   return (
     <div className='header'>
       <div className='left-container'>
-        <div>Spot The Shark</div>
-        <div>
-          {' '}
+        <div className='title'>Spot The Shark!</div>
+        <div className='instructions'>
           Get points by clicking on an image but don't click on any more than
           once!
         </div>

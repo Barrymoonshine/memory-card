@@ -1,10 +1,23 @@
 .card {
-  border: 1px solid black;
-  min-width: 200px;
-  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  min-width: 270px;
+  min-height: 295px;
+  border-radius: 10px;
+  padding: 5px;
+  color: #3b82f6;
+  background-color: #e4e4e7;
 }
 
 .shark-imgs {
-  max-width: 100px;
-  max-height: 100px;
+  width: 270px;
+  height: 220px;
+  border-radius: 10px;
+}
+
+.shark-names {
+  padding-top: 20px;
+  font-size: 20px;
 }

@@ -3,10 +3,23 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
-  margin-bottom: 10px;
-  width: 95%;
+  width: 99%;
+  margin-bottom: 30px;
+  color: #f9fafb;
 }
 
 .left-container {
-  justify-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.right-container {
+  justify-self: flex-end;
+}
+
+.title {
+  font-family: 'Lilita One', cursive;
+  font-size: 60px;
 }

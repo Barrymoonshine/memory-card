@@ -36,7 +36,7 @@ const CardsContainer = (props) => {
       <div>
         <img src={props.sharkImg} className='shark-imgs' alt='shark' />
       </div>
-      <div>{props.sharkName}</div>
+      <div className='shark-names'>{props.sharkName}</div>
     </div>
   );
 };

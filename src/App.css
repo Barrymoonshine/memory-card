@@ -1,8 +1,24 @@
+#root {
+  background-image: linear-gradient(
+    to top,
+    #316fa6,
+    #007eab,
+    #008ca4,
+    #009791,
+    #1a9f77
+  );
+}
+
+body {
+  margin: 0;
+}
+
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 100vw;
+  width: 95%;
   margin: 0px;
   padding: 0px;
+  font-family: 'Concert One', cursive;
 }
