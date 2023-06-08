@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.3d177793.css",
+    "main.js": "/memory-card/static/js/main.ae84d688.js",
+    "static/media/nurse-shark.jpg": "/memory-card/static/media/nurse-shark.e600ed3ae017e643092c.jpg",
+    "static/media/silky-shark.jpg": "/memory-card/static/media/silky-shark.49bbf103c5aa550bc986.jpg",
+    "static/media/whale-shark.jpg": "/memory-card/static/media/whale-shark.b6264e75f01f4fe5667b.jpg",
+    "static/media/reef-shark.jpg": "/memory-card/static/media/reef-shark.1200718b1b0f1e3d4a03.jpg",
+    "static/media/great-white-shark.jpg": "/memory-card/static/media/great-white-shark.8b89ee0747052e32bd9c.jpg",
+    "static/media/hammerhead-shark.jpeg": "/memory-card/static/media/hammerhead-shark.ed1c3864d9a7faece58a.jpeg",
+    "static/media/greenland-shark.jpeg": "/memory-card/static/media/greenland-shark.fcc7ba588e10cc7a6699.jpeg",
+    "static/media/lemon-shark.jpg": "/memory-card/static/media/lemon-shark.8f0ceba47b3f0f13812a.jpg",
+    "static/media/blue-shark.jpg": "/memory-card/static/media/blue-shark.8a6490c1bdf0921d9c66.jpg",
+    "static/media/goblin-shark.jpg": "/memory-card/static/media/goblin-shark.1dfb33ad21cde19c2311.jpg",
+    "static/media/bull-shark.jpg": "/memory-card/static/media/bull-shark.ce794723c88869232fd1.jpg",
+    "static/media/tiger-shark.jpg": "/memory-card/static/media/tiger-shark.b473f146f022a3575801.jpg",
+    "index.html": "/memory-card/index.html",
+    "main.3d177793.css.map": "/memory-card/static/css/main.3d177793.css.map",
+    "main.ae84d688.js.map": "/memory-card/static/js/main.ae84d688.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3d177793.css",
+    "static/js/main.ae84d688.js"
+  ]
+}
