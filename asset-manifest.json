@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/memory-card/static/css/main.3d177793.css",
-    "main.js": "/memory-card/static/js/main.ae84d688.js",
+    "main.js": "/memory-card/static/js/main.6aa5941e.js",
     "static/media/nurse-shark.jpg": "/memory-card/static/media/nurse-shark.e600ed3ae017e643092c.jpg",
     "static/media/silky-shark.jpg": "/memory-card/static/media/silky-shark.49bbf103c5aa550bc986.jpg",
     "static/media/whale-shark.jpg": "/memory-card/static/media/whale-shark.b6264e75f01f4fe5667b.jpg",
@@ -16,10 +16,10 @@
     "static/media/tiger-shark.jpg": "/memory-card/static/media/tiger-shark.b473f146f022a3575801.jpg",
     "index.html": "/memory-card/index.html",
     "main.3d177793.css.map": "/memory-card/static/css/main.3d177793.css.map",
-    "main.ae84d688.js.map": "/memory-card/static/js/main.ae84d688.js.map"
+    "main.6aa5941e.js.map": "/memory-card/static/js/main.6aa5941e.js.map"
   },
   "entrypoints": [
     "static/css/main.3d177793.css",
-    "static/js/main.ae84d688.js"
+    "static/js/main.6aa5941e.js"
   ]
 }
