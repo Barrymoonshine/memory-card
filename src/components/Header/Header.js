@@ -5,6 +5,11 @@ const Header = (props) => {
     <div className='header'>
       <div className='left-container'>
         <div>Spot The Shark</div>
+        <div>
+          {' '}
+          Get points by clicking on an image but don't click on any more than
+          once!
+        </div>
       </div>
       <div className='right-container'>
         <div>Current score: {props.currentScore}</div>
