@@ -4,15 +4,12 @@ const Header = (props) => {
   return (
     <div className='header'>
       <div className='left-container'>
-        <div className='title'>Spot The Shark!</div>
-        <div className='instructions'>
-          Get points by clicking on an image but don't click on any more than
-          once!
-        </div>
+        <div className='title'>Spot The Shark</div>
+        <div className='instructions'>Don't click the same shark twice!</div>
       </div>
       <div className='right-container'>
-        <div>Current score: {props.currentScore}</div>
-        <div>Best score: {props.bestScore}</div>
+        <div className='scores'>Current score: {props.currentScore}</div>
+        <div className='scores'>Best score: {props.bestScore}</div>
       </div>
     </div>
   );

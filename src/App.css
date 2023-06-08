@@ -1,24 +1,34 @@
-#root {
-  background-image: linear-gradient(
-    to top,
-    #316fa6,
-    #007eab,
-    #008ca4,
-    #009791,
-    #1a9f77
-  );
-}
-
 body {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 100vw;
+  margin: 0px;
+  color: #0a0a0a;
+  background: radial-gradient(
+      circle at top left,
+      transparent 25%,
+      #46afe3 25.5%,
+      #46afe3 36%,
+      transparent 37%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      transparent 34%,
+      #46afe3 34.5%,
+      #46afe3 45.5%,
+      transparent 46%,
+      transparent 100%
+    );
+  background-size: 3em 3em;
+  background-color: #ffffff;
+  opacity: 1;
 }
 
 .page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 95%;
-  margin: 0px;
-  padding: 0px;
   font-family: 'Concert One', cursive;
+  padding: 10px;
 }
