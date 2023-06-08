@@ -2,68 +2,90 @@ import './CardsContainer.css';
 import React, { useState } from 'react';
 import generateRandomNoArray from '../../utils/generateRandomNoArray.js';
 import Card from '../Card/Card';
+import whaleSharkImg from '../../images/whale-shark.jpg';
+import tigerSharkImg from '../../images/tiger-shark.jpg';
+import hammerheadSharkImg from '../../images/hammerhead-shark.jpeg';
+import bullSharkImg from '../../images/bull-shark.jpg';
+import greatWhiteSharkImg from '../../images/great-white-shark.jpg';
+import lemonSharkImg from '../../images/lemon-shark.jpg';
+import nurseSharkImg from '../../images/nurse-shark.jpg';
+import blueSharkImg from '../../images/blue-shark.jpg';
+import greenlandSharkImg from '../../images/greenland-shark.jpeg';
+import silkySharkImg from '../../images/silky-shark.jpg';
+import goblinSharkImg from '../../images/goblin-shark.jpg';
+import reefSharkImg from '../../images/reef-shark.jpg';
 
 const CardsContainer = (props) => {
-  const [fish, setFishState] = useState([
+  const [shark, setSharkState] = useState([
     {
       orderNo: 1,
-      fishType: 'Shark',
+      sharkName: 'Whale Shark',
+      img: whaleSharkImg,
     },
     {
       orderNo: 2,
-      fishType: 'Squid',
+      sharkName: 'Tiger Shark',
+      img: tigerSharkImg,
     },
     {
       orderNo: 3,
-      fishType: 'Octopus',
+      sharkName: 'Hammerhead Shark',
+      img: hammerheadSharkImg,
     },
     {
       orderNo: 4,
-      fishType: 'Cod',
+      sharkName: 'Bull Shark',
+      img: bullSharkImg,
     },
     {
       orderNo: 5,
-      fishType: 'Salmon',
+      sharkName: 'Great White Shark',
+      img: greatWhiteSharkImg,
     },
     {
       orderNo: 6,
-      fishType: 'Eel',
+      sharkName: 'Lemon Shark',
+      img: lemonSharkImg,
     },
     {
       orderNo: 7,
-      fishType: 'Anchovy',
+      sharkName: 'Nurse Shark',
+      img: nurseSharkImg,
     },
     {
       orderNo: 8,
-      fishType: 'Crab',
+      sharkName: 'Blue Shark',
+      img: blueSharkImg,
     },
     {
       orderNo: 9,
-      fishType: 'Lobster',
+      sharkName: 'Greenland Shark',
+      img: greenlandSharkImg,
     },
     {
       orderNo: 10,
-      fishType: 'Prawn',
+      sharkName: 'Silky Shark',
+      img: silkySharkImg,
     },
     {
       orderNo: 11,
-      fishType: 'Sword Fish',
+      sharkName: 'Goblin Shark',
+      img: goblinSharkImg,
     },
     {
       orderNo: 12,
-      fishType: 'Tuna',
+      sharkName: 'Reef Shark',
+      img: reefSharkImg,
     },
   ]);
 
   const reOrderCards = () => {
     const randomNoArray = generateRandomNoArray(1, 12);
-    const updatedFishOrderNo = fish.map((item, index) => {
+    const updateOrder = shark.map((item, index) => {
       return { ...item, orderNo: randomNoArray[index] };
     });
-    const sortedFish = [...updatedFishOrderNo].sort(
-      (a, b) => a.orderNo - b.orderNo
-    );
-    setFishState(sortedFish);
+    const sortedSharks = [...updateOrder].sort((a, b) => a.orderNo - b.orderNo);
+    setSharkState(sortedSharks);
   };
 
   const handleParentScores = () => {
@@ -75,16 +97,19 @@ const CardsContainer = (props) => {
   };
 
   return (
-    <div className='cards-container'>
-      {fish.map((item) => (
-        <Card
-          key={item.fishType}
-          fishType={item.fishType}
-          reOrderCards={reOrderCards}
-          handleParentScores={handleParentScores}
-          resetParentCurrentScore={resetParentCurrentScore}
-        />
-      ))}
+    <div>
+      <div className='cards-container'>
+        {shark.map((item) => (
+          <Card
+            key={item.sharkName}
+            sharkName={item.sharkName}
+            sharkImg={item.img}
+            reOrderCards={reOrderCards}
+            handleParentScores={handleParentScores}
+            resetParentCurrentScore={resetParentCurrentScore}
+          />
+        ))}
+      </div>
     </div>
   );
 };

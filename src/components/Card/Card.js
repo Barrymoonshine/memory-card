@@ -2,10 +2,10 @@ import './Card.css';
 import React, { useState } from 'react';
 
 const CardsContainer = (props) => {
-  const [clickedFish, setClickedFishState] = useState([]);
+  const [clickedSharks, setClickedSharksState] = useState([]);
 
   const resetClickedFish = () => {
-    setClickedFishState([]);
+    setClickedSharksState([]);
   };
 
   const checkForDuplicate = (updatedArray) => {
@@ -24,16 +24,19 @@ const CardsContainer = (props) => {
     }
   };
 
-  const handleClick = (fishType) => {
-    const updatedArray = [...clickedFish, fishType];
-    setClickedFishState(updatedArray);
+  const handleClick = (sharkName) => {
+    const updatedArray = [...clickedSharks, sharkName];
+    setClickedSharksState(updatedArray);
     handleCard(updatedArray);
     props.reOrderCards();
   };
 
   return (
-    <div className='card' onClick={() => handleClick(props.fishType)}>
-      {props.fishType}
+    <div className='card' onClick={() => handleClick(props.sharkName)}>
+      <div>
+        <img src={props.sharkImg} className='shark-imgs' alt='shark' />
+      </div>
+      <div>{props.sharkName}</div>
     </div>
   );
 };
