@@ -21,12 +21,12 @@ const CardsContainer = (props) => {
       resetClickedFish();
     } else {
       props.handleParentScores();
+      setClickedSharksState(updatedArray);
     }
   };
 
   const handleClick = (sharkName) => {
     const updatedArray = [...clickedSharks, sharkName];
-    setClickedSharksState(updatedArray);
     handleCard(updatedArray);
     props.reOrderCards();
   };
