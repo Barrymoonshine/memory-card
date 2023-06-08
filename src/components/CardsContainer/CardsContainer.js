@@ -79,6 +79,8 @@ const CardsContainer = (props) => {
     },
   ]);
 
+  const [clickedSharks, setClickedSharksState] = useState([]);
+
   const reOrderCards = () => {
     const randomNoArray = generateRandomNoArray(1, 12);
     const updateOrder = shark.map((item, index) => {
@@ -96,6 +98,33 @@ const CardsContainer = (props) => {
     props.resetCurrentScore();
   };
 
+  const resetClickedFish = () => {
+    setClickedSharksState([]);
+  };
+
+  const checkForDuplicate = (updatedArray) => {
+    return updatedArray.some(
+      (item, index) => updatedArray.indexOf(item) !== index
+    );
+  };
+
+  const handleCard = (updatedArray) => {
+    const isCardDuplicate = checkForDuplicate(updatedArray);
+    if (isCardDuplicate) {
+      resetClickedFish();
+      resetParentCurrentScore();
+    } else {
+      handleParentScores();
+      setClickedSharksState(updatedArray);
+    }
+  };
+
+  const handleClick = (sharkName) => {
+    const updatedArray = [...clickedSharks, sharkName];
+    handleCard(updatedArray);
+    reOrderCards();
+  };
+
   return (
     <div>
       <div className='cards-container'>
@@ -104,9 +133,7 @@ const CardsContainer = (props) => {
             key={item.sharkName}
             sharkName={item.sharkName}
             sharkImg={item.img}
-            reOrderCards={reOrderCards}
-            handleParentScores={handleParentScores}
-            resetParentCurrentScore={resetParentCurrentScore}
+            handleClick={handleClick}
           />
         ))}
       </div>

@@ -1,38 +1,8 @@
 import './Card.css';
-import React, { useState } from 'react';
 
 const CardsContainer = (props) => {
-  const [clickedSharks, setClickedSharksState] = useState([]);
-
-  const resetClickedFish = () => {
-    setClickedSharksState([]);
-  };
-
-  const checkForDuplicate = (updatedArray) => {
-    return updatedArray.some(
-      (item, index) => updatedArray.indexOf(item) !== index
-    );
-  };
-
-  const handleCard = (updatedArray) => {
-    const isCardDuplicate = checkForDuplicate(updatedArray);
-    if (isCardDuplicate) {
-      props.resetParentCurrentScore();
-      resetClickedFish();
-    } else {
-      props.handleParentScores();
-      setClickedSharksState(updatedArray);
-    }
-  };
-
-  const handleClick = (sharkName) => {
-    const updatedArray = [...clickedSharks, sharkName];
-    handleCard(updatedArray);
-    props.reOrderCards();
-  };
-
   return (
-    <div className='card' onClick={() => handleClick(props.sharkName)}>
+    <div className='card' onClick={() => props.handleClick(props.sharkName)}>
       <div>
         <img src={props.sharkImg} className='shark-imgs' alt='shark' />
       </div>
