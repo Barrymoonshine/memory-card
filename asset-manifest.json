@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/memory-card/static/css/main.3d177793.css",
-    "main.js": "/memory-card/static/js/main.6aa5941e.js",
+    "main.css": "/memory-card/static/css/main.755eeb39.css",
+    "main.js": "/memory-card/static/js/main.037e5e86.js",
     "static/media/nurse-shark.jpg": "/memory-card/static/media/nurse-shark.e600ed3ae017e643092c.jpg",
     "static/media/silky-shark.jpg": "/memory-card/static/media/silky-shark.49bbf103c5aa550bc986.jpg",
     "static/media/whale-shark.jpg": "/memory-card/static/media/whale-shark.b6264e75f01f4fe5667b.jpg",
@@ -15,11 +15,11 @@
     "static/media/bull-shark.jpg": "/memory-card/static/media/bull-shark.ce794723c88869232fd1.jpg",
     "static/media/tiger-shark.jpg": "/memory-card/static/media/tiger-shark.b473f146f022a3575801.jpg",
     "index.html": "/memory-card/index.html",
-    "main.3d177793.css.map": "/memory-card/static/css/main.3d177793.css.map",
-    "main.6aa5941e.js.map": "/memory-card/static/js/main.6aa5941e.js.map"
+    "main.755eeb39.css.map": "/memory-card/static/css/main.755eeb39.css.map",
+    "main.037e5e86.js.map": "/memory-card/static/js/main.037e5e86.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d177793.css",
-    "static/js/main.6aa5941e.js"
+    "static/css/main.755eeb39.css",
+    "static/js/main.037e5e86.js"
   ]
 }
