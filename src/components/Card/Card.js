@@ -1,6 +1,6 @@
 import './Card.css';
 
-const CardsContainer = (props) => {
+const Card = (props) => {
   return (
     <div className='card' onClick={() => props.handleClick(props.sharkName)}>
       <div>
@@ -11,4 +11,4 @@ const CardsContainer = (props) => {
   );
 };
 
-export default CardsContainer;
+export default Card;
