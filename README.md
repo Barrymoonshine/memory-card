@@ -13,3 +13,8 @@ Spot the shark is a simple memory card game in which the user has to remember wh
 - Dynamically passing image URls from a parent to a child component using props
 - State is isolated and private, meaning that it's not possible to use a dynamically rendered child component to manage state if this needs to be shared across components, and the right way to manage this is in the closest shared parent
 - Sorting the elements of an array by property value using the sort array method
+
+
+## Future features 
+
+- Enhance UX of the sticky header, as absolute positioning looks a bit clunky 
